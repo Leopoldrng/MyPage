@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&display=swap');
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: radial-gradient(circle, #ff3399, #6a0157);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.main::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('ComingSoonPage/dist/src/images/noise.png');
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.newsletter-area, .socials, .e-mail {
+  display: flex;
+  justify-content: center;
+}
+
+.has-line {
+  padding-left: 100px;
+  position: relative;
+}
+
+.has-line::before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: rgb(203, 174, 174);
+  width: 88px;
+  height: 2px;
+}
+
+h1, h5, h6 {
+  color: rgb(203, 174, 174);
+}
+
+h1 {
+  font-size: 94px;
+  line-height: 102px;
+  font-weight: 700;
+  max-width: 820px;
+}
+
+h5 {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 20px;
+  line-height: 68px;
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  h5 {
+    font-size: 16px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+body {
+    font-family: 'Figtree', sans-serif;
+  }
+html {
+  scroll-behavior: smooth;
+}
