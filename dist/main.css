@@ -37,7 +37,8 @@
 
 .newsletter-area, .socials, .e-mail , .Images{
   display: flex;
-  justify-content: center;
+  justify-content: left;
+    padding-left: 30px;
 }
 
 .has-line {
@@ -78,13 +79,25 @@ h6 {
 }
 
 @media (max-width: 767px) {
+
+ .Images,.e-mail,.newsletter-area, .socials,.has-line {
+     justify-content: center;
+ }
   h1 {
     font-size: 32px;
     line-height: 40px;
+      justify-content: center;
+
   }
   h5 {
     font-size: 16px;
+  justify-content: center;
   }
+  h6 {
+      font-size: 16px;
+      justify-content: center;
+  }
+
 }
 
 * {
